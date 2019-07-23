@@ -1,13 +1,15 @@
 <html>
-<head>
-    <title>Graficos EDUCA</title>
 
-    <!-- Include fusioncharts core library -->
-    <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
-    <!-- Include fusion theme -->
-    <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
-    
-    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+<head>
+  <title>Graficos EDUCA</title>
+
+  <!-- Include fusioncharts core library -->
+  <script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+  <!-- Include fusion theme -->
+  <script type="text/javascript"
+    src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+
+  <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
         rel="stylesheet" 
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
         crossorigin="anonymous">
@@ -15,251 +17,319 @@
 </head>
 
 <body id="inicio">
-    <div id="grafico1">FusionCharts XT will load here!</div>
-    <div id="grafico2">FusionCharts XT will load here!</div>
-    <div id="grafico3">FusionCharts XT will load here!</div>    
-    <div id="grafico4">FusionCharts XT will load here!</div>
+  <div id="grafico1"></div>
+  <div id="grafico2"></div>
+  <div id="grafico3"></div>
+  <div id="grafico4"></div>
+  <div id="grafico5"></div>
+  <div id="graficoX"></div>
 </body>
 
 
-    <script type="text/javascript">
-        FusionCharts.ready(function(){
-            var fusioncharts1 = new FusionCharts({
-                type: 'pie2d',
-                renderAt: 'grafico1',
-                width: '700',
-                height: '400',
-                dataFormat: 'json',
-                dataSource: {
-                    // Chart Configuration
-                    "chart": {
-                        "caption": "Importancia de la Inversión Social Privada  ",
-                        "subCaption": "¿Cuán importante es para la empresa invertir en causas sociales de interés público?   ",
-                        "use3DLighting": "0",
-                        "showPercentValues": "1",
-                        "decimals": "1",
-                        //"useDataPlotColorForLabels": "1",
-                        "theme": "fusion",
-                        "palettecolors":"74c371,007600,c9d2fd,0420ab,5e78fa"
+<script type="text/javascript">
 
-                    },
-                    // Chart Data
-                    "data": [
-                    {
-                        "label": "Muy importante",
-                        "value": "56"
-                    },
-                    {
-                        "label": "Importante",
-                        "value": "31"
-                    },
-                    {
-                        "label": "Neutral",
-                        "value": "8"
-                    },
-                    {   
-                        "label": "Poco importante",
-                        "value": "4"
-                    },
-                    {
-                        "label": "Nada importante",
-                        "value": "1"
-                    }
-                    ]
+  const datasource = {
+    // Chart Configuration
+    "chart": {
+      "caption": "Importancia de la Inversión Social Privada  ",
+      "subCaption": "¿Cuán importante es para la empresa invertir en causas sociales de interés público?   ",
+      "use3DLighting": "0",
+      "showPercentValues": "1",
+      "decimals": "1",
+      //"useDataPlotColorForLabels": "1",
+      "theme": "fusion",
+      "palettecolors": "74c371,007600,c9d2fd,0420ab,5e78fa"
 
-                }
-            });
-            fusioncharts1.render();
-        });
-   
-// Grafico 2 
-    
-        FusionCharts.ready(function(){
-            var fusioncharts2 = new FusionCharts({
-                type: 'column2d',
-                renderAt: 'grafico2',
-                width: '700',
-                height: '400',
-                dataFormat: 'json',
-                dataSource: {
-                    // Chart Configuration
-                    "chart": {
-                        "caption": "Mecanismos para la Inversión Social Privada",
-                        "subCaption": "La mayoría de las empresas realizan su inversión social a través de su propio departamento de Responsabilidad Social Empresarial y/o a través de otra institución",
-                        "xaxisname": "Empresas que dijeron invertir en causas sociales",
-                        "yaxisname": "Porcentaje de empresas",
-                        
-                        "showPercentValues": "1",
-                        "decimals": "1",
-                        //"useDataPlotColorForLabels": "1",
-                        "theme": "fusion",
-                        "palettecolors":"74c371,007600,c9d2fd,0420ab,5e78fa"
-
-                    },
-                    // Chart Data
-                    "data": [
-                    {
-                        "label": "A traves de un departamento de...",
-                        "value": "49"
-                    },
-                    {
-                        "label": "A traves de otra institucion...",
-                        "value": "49"
-                    },
-                    {
-                        "label": "La empresa tiene una fundacion...",
-                        "value": "20"
-                    },
-                    {   
-                        "label": "A traves de otros mecanismos...",
-                        "value": "12"
-                    }
-                    ]
-
-                }
-            });
-            fusioncharts2.render();
-        });
-
-// Grafico 3 
-
-        FusionCharts.ready(function(){
-            var fusioncharts3 = new FusionCharts({
-                type: 'pie2d',
-                renderAt: 'grafico3',
-                width: '700',
-                height: '400',
-                dataFormat: 'json',
-                dataSource: {
-                    // Chart Configuration
-                    "chart": {
-                        "caption": "Mecanismos para la Inversión Social Privada",
-                        "subCaption": "3 de cada 10 empresas usa diversos mecanismos para realizar su inversión social",
-                        "use3DLighting": "0",
-                        "showPercentValues": "1",
-                        "decimals": "1",
-                        //"useDataPlotColorForLabels": "1",
-                        "theme": "fusion",
-                        "palettecolors":"74c371,007600,c9d2fd,0420ab,5e78fa"
-
-                    },
-                    // Chart data
-                    "data": [
-                    {
-                        "label": "Varios mecanismos",
-                        "value": "28"
-                    },
-                    {
-                        "label": "Un mecanismo",
-                        "value": "72"
-                    }]
-                }
-            });
-            fusioncharts3.render();
-        });
-
-//<!-- Grafico 4 -->
-const dataSource = {
-  chart: {
-    caption: "Split of visitors by Channels",
-    placevaluesinside: "1",
-    showvalues: "0",
-    plottooltext: "<b>$dataValue</b> visitors from $label in $seriesName",
-    theme: "fusion"
-  },
-  categories: [
-    {
-      category: [
-        {
-          label: "Organic"
-        },
-        {
-          label: "Offline Stores"
-        },
-        {
-          label: "Email Campaigns"
-        },
-        {
-          label: "Social Events"
-        },
-        {
-          label: "Paid Channels"
-        }
-      ]
-    }
-  ],
-  dataset: [
-    {
-      seriesname: "2017",
-      data: [
-        {
-          value: "17000"
-        },
-        {
-          value: "19500"
-        },
-        {
-          value: "12500"
-        },
-        {
-          value: "14500"
-        },
-        {
-          value: "17500"
-        }
-      ]
     },
-    {
-      seriesname: "2018",
-      data: [
-        {
-          value: "25400"
-        },
-        {
-          value: "29800"
-        },
-        {
-          value: "21800"
-        },
-        {
-          value: "19500"
-        },
-        {
-          value: "21200"
-        }
-      ]
-    }
-  ],
-  trendlines: [
-    {
-      line: [
-        {
-          startvalue: "16200",
-          color: "#5D62B5",
-          thickness: "1.5",
-          displayvalue: "2017's Avg."
-        },
-        {
-          startvalue: "23500",
-          color: "#29C3BE",
-          thickness: "1.5",
-          displayvalue: "2018's Avg."
-        }
-      ]
-    }
-  ]
-};
+    // Chart Data
+    "data": [
+      {
+        "label": "Muy importante",
+        "value": "56"
+      },
+      {
+        "label": "Importante",
+        "value": "31"
+      },
+      {
+        "label": "Neutral",
+        "value": "8"
+      },
+      {
+        "label": "Poco importante",
+        "value": "4"
+      },
+      {
+        "label": "Nada importante",
+        "value": "1"
+      }
+    ]
 
-FusionCharts.ready(function() {
-  var myChart = new FusionCharts({
-    type: "msbar2d",
-    renderAt: "chart-container",
-    width: "100%",
-    height: "100%",
-    dataFormat: "json",
-    dataSource
-  }).render();
-});
+  };
+
+  // Grafico 2 
+  const datasource2 = {
+    // Chart Configuration
+    "chart": {
+      "caption": "Mecanismos para la Inversión Social Privada",
+      "subCaption": "La mayoría de las empresas realizan su inversión social a través de su propio departamento de Responsabilidad Social Empresarial y/o a través de otra institución",
+      "xaxisname": "Empresas que dijeron invertir en causas sociales",
+      "yaxisname": "Porcentaje de empresas",
+
+      "showPercentValues": "1",
+      "decimals": "1",
+      //"useDataPlotColorForLabels": "1",
+      "theme": "fusion",
+      "palettecolors": "74c371,007600,c9d2fd,0420ab,5e78fa"
+
+    },
+    // Chart Data
+    "data": [
+      {
+        "label": "A traves de un departamento de...",
+        "value": "49"
+      },
+      {
+        "label": "A traves de otra institucion...",
+        "value": "49"
+      },
+      {
+        "label": "La empresa tiene una fundacion...",
+        "value": "20"
+      },
+      {
+        "label": "A traves de otros mecanismos...",
+        "value": "12"
+      }
+    ]
+
+  };
+
+  // Grafico 3 
+  const datasource3 = {
+    // Chart Configuration
+    "chart": {
+      "caption": "Mecanismos para la Inversión Social Privada",
+      "subCaption": "3 de cada 10 empresas usa diversos mecanismos para realizar su inversión social",
+      "use3DLighting": "0",
+      "showPercentValues": "1",
+      "decimals": "1",
+      //"useDataPlotColorForLabels": "1",
+      "theme": "fusion",
+      "palettecolors": "74c371,007600,c9d2fd,0420ab,5e78fa"
+
+    },
+    // Chart data
+    "data": [
+      {
+        "label": "Varios mecanismos",
+        "value": "28"
+      },
+      {
+        "label": "Un mecanismo",
+        "value": "72"
+      }]
+  };
+
+  // Grafico 4
+  const dataSource4 = {
+    chart: {
+      caption: "Split of visitors by Channels",
+      placevaluesinside: "1",
+      showvalues: "0",
+      plottooltext: "<b>$dataValue</b> visitors from $label in $seriesName",
+      theme: "fusion"
+    },
+    categories: [
+      {
+        category: [
+          {
+            label: "Organic"
+          },
+          {
+            label: "Offline Stores"
+          },
+          {
+            label: "Email Campaigns"
+          },
+          {
+            label: "Social Events"
+          },
+          {
+            label: "Paid Channels"
+          }
+        ]
+      }
+    ],
+    dataset: [
+      {
+        seriesname: "2017",
+        data: [
+          {
+            value: "17000"
+          },
+          {
+            value: "19500"
+          },
+          {
+            value: "12500"
+          },
+          {
+            value: "14500"
+          },
+          {
+            value: "17500"
+          }
+        ]
+      },
+      {
+        seriesname: "2018",
+        data: [
+          {
+            value: "25400"
+          },
+          {
+            value: "29800"
+          },
+          {
+            value: "21800"
+          },
+          {
+            value: "19500"
+          },
+          {
+            value: "21200"
+          }
+        ]
+      }
+    ],
+    trendlines: [
+      {
+        line: [
+          {
+            startvalue: "16200",
+            color: "#5D62B5",
+            thickness: "1.5",
+            displayvalue: "2017's Avg."
+          },
+          {
+            startvalue: "23500",
+            color: "#29C3BE",
+            thickness: "1.5",
+            displayvalue: "2018's Avg."
+          }
+        ]
+      }
+    ]
+  };
+  
+  // Grafico 5
+  const datasource5 = {
+    // Chart Configuration
+    "chart": {
+      "caption": "Sectores sociales de la Inversión Social Privada",
+      "subCaption": "89% de estas empresas que declaran invertir en causas sociales invierten en el sector educación",
+      "xaxisname": "Sectores a las que su empresa dirigen su inversión social",
+      "yaxisname": "Porcentaje de empresas",
+
+      "showPercentValues": "1",
+      "decimals": "1",
+      //"useDataPlotColorForLabels": "1",
+      "theme": "fusion",
+      "palettecolors": "74c371,007600,c9d2fd,0420ab,5e78fa",
+
+    },
+    // Chart Data
+    "data": [
+      {
+        "label": "Medio Ambiente",
+        "value": "66"
+      },
+      {
+        "label": "Salud",
+        "value": "49"
+      },
+      {
+        "label": "Educación",
+        "value": "89"
+      },
+      {
+        "label": "Otros",
+        "value": "34",
+        "tooltext": "Otros sectores sociales donde las empresas declararon invertir son: Cultura, Desarrollo, Deportes, Discapacidad, Comunidad,  Inclusión, Desarrollo, Valores, Emprendimiento, entre otros."
+      }
+    ]
+
+  };
+
+  FusionCharts.ready(function () {
+    //Grafico 1
+    var fusioncharts1 = new FusionCharts({
+      type: 'pie2d',
+      renderAt: 'grafico1',
+      width: '700',
+      height: '400',
+      dataFormat: 'json',
+      dataSource: datasource,
+      "events": {
+        "dataPlotClick": function (ev, props) {
+          showAlert();
+          function showAlert() {
+            alert("Data Plot Clicked: " + props.toolText);
+          }
+        }
+      }
+    });
+
+    //Grafico 2
+    var fusioncharts2 = new FusionCharts({
+      type: 'column2d',
+      renderAt: 'grafico2',
+      width: '700',
+      height: '400',
+      dataFormat: 'json',
+      dataSource: datasource2
+    });
+
+    //Grafico 3
+    var fusioncharts3 = new FusionCharts({
+      type: 'pie2d',
+      renderAt: 'grafico3',
+      width: '700',
+      height: '400',
+      dataFormat: 'json',
+      dataSource: datasource3
+    });
+
+    //Grafico4
+    var fusioncharts4 = new FusionCharts({
+      type: "msbar2d",
+      renderAt: "grafico4",
+      width: "100%",
+      height: "100%",
+      dataFormat: "json",
+      dataSource: dataSource4
+    });
+
+    //Grafico5
+
+    var fusioncharts5 = new FusionCharts({
+      type: 'column2d',
+      renderAt: 'grafico5',
+      width: '100%',
+      height: '100%',
+      dataFormat: 'json',
+      dataSource: datasource5
+    });
+
+    fusioncharts1.render();
+    fusioncharts2.render();
+    fusioncharts3.render();
+    fusioncharts4.render();
+    fusioncharts5.render();
+
+  });
 
 </script>
+
 </html>
