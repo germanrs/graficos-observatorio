@@ -27,8 +27,8 @@
             var fusioncharts1 = new FusionCharts({
                 type: 'pie2d',
                 renderAt: 'grafico1',
-                width: '700',
-                height: '400',
+                width: '100%',
+                height: '100%',
                 dataFormat: 'json',
                 dataSource: {
                     // Chart Configuration
@@ -78,8 +78,8 @@
             var fusioncharts2 = new FusionCharts({
                 type: 'column2d',
                 renderAt: 'grafico2',
-                width: '700',
-                height: '400',
+                width: '100%',
+                height: '100%',
                 dataFormat: 'json',
                 dataSource: {
                     // Chart Configuration
@@ -122,13 +122,12 @@
         });
 
 // Grafico 3 
-
         FusionCharts.ready(function(){
             var fusioncharts3 = new FusionCharts({
                 type: 'pie2d',
                 renderAt: 'grafico3',
-                width: '700',
-                height: '400',
+                width: '100%',
+                height: '100%',
                 dataFormat: 'json',
                 dataSource: {
                     // Chart Configuration
@@ -161,105 +160,44 @@
 //<!-- Grafico 4 -->
 const dataSource = {
   chart: {
-    caption: "Split of visitors by Channels",
-    placevaluesinside: "1",
-    showvalues: "0",
-    plottooltext: "<b>$dataValue</b> visitors from $label in $seriesName",
+    caption: "Mecanismos para la Inversión Social Privada",
+    subcaption: "3 de cada 10 empresas usa diversos mecanismos para realizar su inversión social",
+    yaxisname: "Porcentaje de empresas según la cantidad de mecanismos que usan para realizar su inversión social",
+    aligncaptionwithcanvas: "0",
+    plottooltext: "<b>$dataValue%</b> de las empresas utiliza <b>$label</b> como mecanismo para realizar su inversion social. ",
     theme: "fusion"
   },
-  categories: [
+  data: [
     {
-      category: [
-        {
-          label: "Organic"
-        },
-        {
-          label: "Offline Stores"
-        },
-        {
-          label: "Email Campaigns"
-        },
-        {
-          label: "Social Events"
-        },
-        {
-          label: "Paid Channels"
-        }
-      ]
-    }
-  ],
-  dataset: [
-    {
-      seriesname: "2017",
-      data: [
-        {
-          value: "17000"
-        },
-        {
-          value: "19500"
-        },
-        {
-          value: "12500"
-        },
-        {
-          value: "14500"
-        },
-        {
-          value: "17500"
-        }
-      ]
+      label: "Otra institucion",
+      value: "39"
     },
     {
-      seriesname: "2018",
-      data: [
-        {
-          value: "25400"
-        },
-        {
-          value: "29800"
-        },
-        {
-          value: "21800"
-        },
-        {
-          value: "19500"
-        },
-        {
-          value: "21200"
-        }
-      ]
-    }
-  ],
-  trendlines: [
+      label: "Dpto. de RSE u otro dpto interno",
+      value: "39"
+    },
     {
-      line: [
-        {
-          startvalue: "16200",
-          color: "#5D62B5",
-          thickness: "1.5",
-          displayvalue: "2017's Avg."
-        },
-        {
-          startvalue: "23500",
-          color: "#29C3BE",
-          thickness: "1.5",
-          displayvalue: "2018's Avg."
-        }
-      ]
+      label: "Fundacion propia",
+      value: "12"
+    },
+    {
+      label: "Otros mecanismos",
+      value: "10"
     }
   ]
 };
 
 FusionCharts.ready(function() {
-  var myChart = new FusionCharts({
-    type: "msbar2d",
-    renderAt: "chart-container",
+  var grafico4 = new FusionCharts({
+    type: "bar2d",
+    renderAt: "grafico4",
     width: "100%",
     height: "100%",
     dataFormat: "json",
     dataSource
   }).render();
 });
+
 
 </script>
 </html>
